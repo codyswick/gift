@@ -107,4 +107,9 @@ let text = document.getElementById("text");
 window.addEventListener("scroll", function(){
   let value = window.scrollY;
   text.style.marginBottom = value * 1.5 + "px";
+  setTimeout(function(){
+    text.classList.remove("text-opa-0");
+    text.classList.add("text-opa");
+  },400);
+
 })

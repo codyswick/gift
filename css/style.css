@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(#E5E5E5, #9198e5);;
+  background: white;
 
   overflow-x: hidden;
 }
@@ -50,7 +50,7 @@ img {
 }
 
 .ag-timeline-block {
-  padding: 300px 0;
+  padding: 0px 0;
 }
 .ag-timeline_title-box {
   padding: 0 0 30px;
@@ -2132,4 +2132,73 @@ a {
 
 .cs-border-pale-blue, .cs-hover-border-pale-blue:hover {
   border-color: #e7ffff !important
+}
+
+
+
+/* Clouds */
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.banner{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url("/img/couple2.jpg");
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner img{
+	margin-top:500px;
+}
+.banner #text{
+	padding-top: 840px;
+	position: relative;
+	font-size: 12em;
+	color:#fff;
+	text-shadow: 4px 4px black
+}
+
+.banner .clouds{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	pointer-events: none;
+
+}
+
+.banner .clouds img{
+	position: absolute;
+	bottom: 0;
+	max-width: 100%;
+	animation: animate calc(3s * var(--i)) linear infinite;
+}
+
+
+@keyframes animate {
+	0%
+	{
+		opacity: 0;
+		transform: scale(1);
+	}
+	25%,75%{
+		opacity: 1;
+	}
+	100%
+	{
+		opacity: 0;
+		transform: scale(3);
+	}
+
 }

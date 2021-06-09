@@ -97,3 +97,14 @@ function cs_open() {
 function cs_close() {
     mySidebar.style.display = "none";
 }
+
+
+
+
+//parallax
+
+let text = document.getElementById("text");
+window.addEventListener("scroll", function(){
+  let value = window.scrollY;
+  text.style.marginBottom = value * 1.5 + "px";
+})
